@@ -1,0 +1,14 @@
+{
+  "8cd1d429-5241-453c-bb7d-21ce0e6d707f": {
+    "resourceKinds": [
+      {
+        "resourceKindKey": "VirtualMachine",
+        "adapterKindKey": "VMWARE"
+      }
+    ],
+    "modificationTime": 1582639058199,
+    "name": "New VM",
+    "formula": "count(${this, metric=System Properties|resource_kind_type, where=\"equals GENERAL\"}) && !count(${this, metric=OnlineCapacityAnalytics|capacityRemainingPercentage})",
+    "description": ""
+  }
+}

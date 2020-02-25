@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><alertContent>
+    <AlertDefinitions>
+        <AlertDefinition adapterKind="VMWARE" id="AlertDefinition-c07f8092-103f-44ad-9827-126535e46957" name="New VM Created" resourceKind="VirtualMachine" subType="18" type="16">
+            <State severity="automatic">
+                <SymptomSet applyOn="self" operator="and" ref="SymptomDefinition-e079c425-1136-48ac-be1c-3a015aaae504"/>
+                <Impact key="efficiency" type="badge"/>
+            </State>
+        </AlertDefinition>
+    </AlertDefinitions>
+    <SymptomDefinitions>
+        <SymptomDefinition adapterKind="VMWARE" cancelCycle="12" id="SymptomDefinition-e079c425-1136-48ac-be1c-3a015aaae504" name="New VM Created" resourceKind="VirtualMachine">
+            <State severity="critical">
+                <Condition key="Super Metric|sm_8cd1d429-5241-453c-bb7d-21ce0e6d707f" operator="=" thresholdType="static" type="metric" value="1.0" valueType="numeric"/>
+            </State>
+        </SymptomDefinition>
+    </SymptomDefinitions>
+</alertContent>
